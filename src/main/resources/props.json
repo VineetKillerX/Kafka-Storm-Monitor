@@ -1,0 +1,34 @@
+{
+  "kafka": [
+    {
+      "clusterName": "prod",
+      "bootstrapServers": "kafka.bootstrapservers",
+      "groupId": "test-consumer-group",
+      "keyDeserializer": "org.apache.kafka.common.serialization.ByteArrayDeserializer",
+      "valueDeserializer": "org.apache.kafka.common.serialization.ByteArrayDeserializer"
+    }
+  ],
+  "storm": [
+    {
+      "stormUrl": "http://storm1:8080",
+      "zookeeperServers": "zookeeper1",
+      "clusterName": "storm1",
+      "blackListedTopologies": "sample"
+    }
+  ],
+  "general": {
+    "refreshInterval": "300",
+    "slackToggle": true,
+    "emailToggle": false
+  },
+  "email": {
+    "mailHost": "mailrelay.abc.com",
+    "mailPort": "25",
+    "from": "xyz@abc.com",
+    "to": "vineetludhani123@gmail.com",
+    "subject": "Kafka Storm Monitoring Alert"
+  },
+  "slack": {
+    "webHookUrl": "slackwebhook"
+  }
+}
